@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OPTIMUS ESTATE — Ekskluzywne nieruchomości na wybrzeżu Bułgarii</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#fff;color:#1a1a1a}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 68px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#A9B6C8}
+.h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#1C2B4B;line-height:1.1;margin-top:10px}
+.ico{stroke:#A9B6C8;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* HERO */
+.hero{background:url('hero-bg.jpg') center/cover no-repeat;color:#fff;min-height:440px}
+.hero-in{padding-top:36px;padding-bottom:56px}
+.hero-logo{height:120px;width:auto}
+.hero h1,.hero p{text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.badge-h{display:inline-block;margin-top:40px;background:#A9B6C8;color:#1C2B4B;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:6px 10px;border-radius:2px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:600;line-height:1.05;text-transform:uppercase;margin-top:14px;letter-spacing:.5px}
+.hero p{margin-top:18px;max-width:640px;font-size:13px;line-height:1.55;color:#eef0f5}
+.hero p b{color:#EAEFF6;font-weight:600}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hb{display:inline-flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:12px 18px;border-radius:2px;background:#A9B6C8;color:#1C2B4B;border:1.5px solid #A9B6C8}
+.hb.ghost{background:rgba(14,24,48,.5);color:#fff;border-color:#fff}
+
+/* USP */
+.usp{background:#fff;border-bottom:1px solid #EEE9DF}
+.usp .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0 0}
+.usp-i{display:flex;gap:12px;padding:22px 24px;border-left:1px solid #EEE9DF;align-items:flex-start}
+.usp-i:first-child{border-left:none;padding-left:68px}
+.usp-i svg{width:20px;height:20px;flex-shrink:0;margin-top:2px}
+.usp-t{font-size:11.5px;font-weight:700;color:#1C2B4B}
+.usp-s{font-size:9.5px;color:#7c8190;margin-top:4px;line-height:1.4}
+
+/* SECTIONS */
+.sec{background:#FAF7F0;padding:42px 0 52px}
+.sec.white{background:#fff;padding:44px 0 56px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.head .h2{margin-top:6px}
+.allprice{background:#1C2B4B;color:#fff;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:12px 18px;border-radius:999px}
+
+/* CARDS */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(28,43,75,.08),0 6px 18px rgba(28,43,75,.05);display:flex;flex-direction:column}
+.ph{height:176px;overflow:hidden;background:#EEE9DF}
+.ph img{width:100%;height:100%;object-fit:cover}
+.cb{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.ct{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ct h3{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:700;color:#1C2B4B;line-height:1.1}
+.loc{display:flex;align-items:center;gap:5px;font-size:10.5px;color:#7c8190;margin-top:6px}
+.loc svg{width:11px;height:11px;stroke:#D2673A;fill:none;stroke-width:2}
+.badge{font-size:9.5px;font-weight:700;padding:5px 8px;border-radius:4px;white-space:nowrap;margin-top:2px}
+.badge.top{background:#EDF1F7;color:#33405A}
+.badge.in{background:#E8ECF2;color:#1C2B4B}
+.card ul{margin-top:16px;display:flex;flex-direction:column;gap:7px}
+.card li{display:flex;gap:8px;font-size:11.5px;color:#2b3140;line-height:1.4}
+.card li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--ac);margin-top:6px;flex-shrink:0}
+.offer{margin-top:14px}
+.lbl{font-size:8.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7c8190}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:9px;font-weight:600;padding:4px 9px;border-radius:999px;border:1px solid var(--ac);color:var(--ac)}
+.tag.fill{background:var(--ac);color:#fff}
+.fee{display:flex;justify-content:space-between;gap:10px;font-size:10px;color:#7c8190;border-top:1px solid #EEE9DF;margin-top:auto;padding-top:12px}
+.fee b{color:#1C2B4B;font-weight:700;font-size:10.5px}
+.cb .offer + .fee{margin-top:16px}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.btns.one{grid-template-columns:1fr}
+.btn{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;padding:10px;border-radius:4px;border:1.5px solid var(--ac);transition:opacity .15s}
+.btn.pres{background:var(--ac);color:#fff}
+.btn.line{background:#fff;color:var(--ac);border-color:#E3B7A5}
+.btn:hover{opacity:.88}
+.apollon{--ac:#C2531C}.apollon .btn.line{border-color:#E8B8A0}
+.tarsis{--ac:#8E1B1B}.tarsis .btn.line{border-color:#E2B5B5}
+.belle{--ac:#0F4C75}.belle .btn.line{border-color:#B7CCDC}
+.pom{--ac:#1E5A52}.pom .btn.line{border-color:#B9D2CD}
+.central{--ac:#5A6B52}.central .btn.line{border-color:#C9D2C4}
+.pom .tag,.central .tag,.apollon .tag{border-color:#C9CDD8;color:#1C2B4B}
+.apollon .tag{border-color:#E9A98A;color:#C2531C}
+.tarsis .tag:not(.fill){border-color:#8E1B1B;color:#8E1B1B}
+.belle .tag:not(.fill){border-color:#0F4C75;color:#0F4C75}
+.central .tag{border-color:#C9CDD8;color:#1C2B4B}
+.pom .tag{border-color:#C9CDD8;color:#1C2B4B}
+.card.secm{--ac:#1C2B4B}
+.card.secm .btn.pres{background:#1C2B4B;border-color:#1C2B4B}
+.card.secm .tag{border-color:#C9CDD8;color:#1C2B4B}
+.card.secm li::before{background:#A9B6C8}
+.apollon li::before,.tarsis li::before,.belle li::before,.pom li::before,.central li::before{background:#D2673A}
+.tarsis li::before{background:#D2673A}
+
+/* TOOLS */
+.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tool{background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(28,43,75,.08),0 6px 18px rgba(28,43,75,.05);padding:18px 18px 16px;display:flex;flex-direction:column;min-height:180px}
+.tool-ic{width:28px;height:28px;border-radius:50%;background:#EDF1F7;display:flex;align-items:center;justify-content:center}
+.tool-ic svg{width:14px;height:14px}
+.q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:#7c8190;margin-top:14px}
+.tool-t{font-size:12px;font-weight:700;color:#1C2B4B;margin-top:8px}
+.tool-t.sm{line-height:1.3}
+.tool-s{font-size:10px;color:#5b6273;line-height:1.5;margin-top:6px}
+.chip{align-self:flex-start;margin-top:auto;font-size:8.5px;font-weight:700;color:#33405A;background:#EDF1F7;padding:4px 8px;border-radius:3px}
+.tool .tool-s + .chip{margin-top:auto}
+.tool-body{flex:1;display:flex;flex-direction:column;gap:0;margin-bottom:14px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;margin-top:26px}
+.sn{width:32px;height:32px;border-radius:50%;border:1.5px solid #A9B6C8;color:#1C2B4B;background:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step.dark .sn{background:#1C2B4B;border-color:#1C2B4B;color:#fff}
+.st{font-size:11px;font-weight:700;color:#1C2B4B;margin-top:10px;line-height:1.3}
+.new{display:inline-block;background:#A9B6C8;color:#1C2B4B;font-size:7px;font-weight:800;letter-spacing:.5px;padding:2px 4px;border-radius:2px;margin-left:3px;vertical-align:middle}
+.ss{font-size:9.5px;color:#7c8190;line-height:1.45;margin-top:4px}
+
+/* CTA */
+.cta{background:#1C2B4B;color:#fff}
+.cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-top:36px;padding-bottom:36px}
+.cta .eyebrow{font-size:9px}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;line-height:1.1;margin-top:10px}
+.cta p{font-size:12px;line-height:1.55;color:#dfe3ec;margin-top:14px;max-width:420px}
+.cta-r{display:flex;gap:18px;align-items:stretch}
+.cta-b{display:flex;flex-direction:column;gap:10px;justify-content:center}
+.cb1{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;padding:12px 22px;border-radius:2px;background:#A9B6C8;color:#1C2B4B;white-space:nowrap}
+.cb2{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;padding:11px 22px;border-radius:2px;border:1.5px solid #fff;color:#fff;white-space:nowrap}
+.qr{width:112px;height:112px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:8.5px;color:#9aa0ac;text-align:center}
+
+/* FOOTER */
+.foot{background:#fff;padding:44px 0 26px}
+.foot .eyebrow{color:#7c8190;font-size:9px;letter-spacing:1.4px}
+.people{display:flex;gap:90px;margin-top:20px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid #EEE9DF}
+.pn{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#1C2B4B}
+.pp{display:block;font-size:11px;color:#2b3140;margin-top:4px}
+.msgs{display:flex;align-items:center;gap:12px;margin-top:12px}
+.wa{background:#0B8A43;color:#fff;font-size:9px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:8px 14px;border-radius:2px}
+.ml{font-size:9px;color:#5b6273;text-decoration:underline}
+.fc{text-align:center;padding-top:34px}
+.fc img{height:60px;width:auto;margin:0 auto}
+.fl{font-size:9.5px;color:#5b6273;margin-top:8px}
+.ig{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#1C2B4B;text-decoration:underline;margin-top:8px}
+.cp{font-size:8.5px;color:#7c8190;margin-top:26px}
+
+@media(max-width:1000px){
+  .wrap{padding:0 28px}
+  .usp .wrap{grid-template-columns:1fr 1fr}
+  .usp-i,.usp-i:first-child{padding:18px 20px;border-left:none}
+  .grid{grid-template-columns:1fr 1fr}
+  .tools{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(4,1fr);row-gap:24px}
+  .cta .wrap{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:640px){
+  .wrap{padding:0 18px}
+  .hero h1{font-size:34px}
+  .hero{min-height:0}
+  .hero-logo{height:90px}
+  .h2{font-size:32px}
+  .usp .wrap{grid-template-columns:1fr}
+  .grid,.tools{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .cta-r{flex-direction:column}
+  .people{gap:30px}
+}
+
+/* ── КАРТОЧКИ: оформление test-general, гамма general (тёмно-синий + золото) ── */
+.card{--ac:#1C2B4B}
+.card h3{color:#1C2B4B}
+.loc svg{stroke:#A9B6C8}
+.card li::before{background:#A9B6C8}
+.tag,.tarsis .tag:not(.fill),.belle .tag:not(.fill),.apollon .tag,.pom .tag,.central .tag,.card.secm .tag{border:1px solid #D8D2C2;color:#1C2B4B;background:#fff}
+.tag.fill,.tarsis .tag.fill,.belle .tag.fill{background:#EDF1F7;border:1px solid #A9B6C8;color:#33405A}
+.btn.pres,.card.secm .btn.pres{background:#1C2B4B;border-color:#1C2B4B;color:#fff}
+.btn.line,.apollon .btn.line,.tarsis .btn.line,.belle .btn.line,.pom .btn.line,.central .btn.line{background:#A9B6C8;border-color:#A9B6C8;color:#1C2B4B}
+.btn:hover{opacity:1;filter:brightness(1.08)}
+.fee b{color:#1C2B4B}
+.lbl{color:#7c8190}
+.ig{display:flex;justify-content:center;margin-top:10px;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#1C2B4B}
+.ig svg{width:13px;height:13px;margin-right:6px;stroke:#7B889C;fill:none;stroke-width:1.8}
+.ig:hover{color:#7B889C}
+
+/* ── ШРИФТЫ (шкала как в презентациях) + ШАПКА-ПРЕИМУЩЕСТВА + ФУТЕР ── */
+.eyebrow,.foot .eyebrow,.cta .eyebrow{font-size:11px;letter-spacing:1.6px}
+.hero p{font-size:15px;max-width:680px}
+.badge-h{font-size:11px}
+.hb{font-size:12px;padding:13px 20px}
+.allprice{font-size:11px}
+.usp{background:#1C2B4B;border-bottom:3px solid #A9B6C8}
+.usp .wrap{gap:0}
+.usp-i{align-items:center;gap:14px;padding:26px 24px;border-left:1px solid rgba(169,182,200,.35)}
+.usp-i:first-child{padding-left:0;border-left:none}
+.usp-ic{width:44px;height:44px;border-radius:50%;border:1.5px solid #A9B6C8;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.usp-ic svg{width:21px;height:21px;fill:none;stroke:#EAEFF6;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.usp-t{font-size:15px;font-weight:700;color:#fff;line-height:1.25}
+.usp-s{font-size:12px;color:#C9CFDC;margin-top:3px;line-height:1.4}
+.ct h3{font-size:28px}
+.cb .offer + .fee{margin-top:auto}
+.offer{margin-bottom:16px}
+.loc{font-size:12px}
+.badge{font-size:11px;padding:5px 9px}
+.card li{font-size:14px}
+.lbl{font-size:11px}
+.tag{font-size:11.5px;padding:5px 10px}
+.fee{font-size:12.5px}
+.fee b{font-size:13px}
+.btn{font-size:13px;padding:11px}
+.q{font-size:15px}
+.tool-t{font-size:15px}
+.tool-s{font-size:13px}
+.chip{font-size:11px;padding:5px 9px}
+.st{font-size:14px}
+.ss{font-size:12px}
+.sn{font-size:12px}
+.new{font-size:9px;padding:2px 5px}
+.cta p{font-size:15px;max-width:460px}
+.cb1,.cb2{font-size:13px}
+.qr{font-size:11px}
+.foot .eyebrow{font-size:11px}
+.pn{font-size:26px}
+.pp{font-size:19px;font-weight:600;margin-top:6px}
+.msgs{gap:16px;margin-top:14px}
+.wa{display:inline-flex;align-items:center;gap:7px;background:#2D9B6F;font-size:13px;font-weight:700;letter-spacing:.4px;text-transform:none;padding:10px 18px}
+.wa svg{width:16px;height:16px;fill:#fff}
+.ml{font-size:14px;font-weight:600}
+.fl{font-size:14px}
+.ig{font-size:12px}
+.cp{font-size:11px}
+@media(max-width:1000px){.usp-i,.usp-i:first-child{padding:18px 20px;border-left:none}.usp .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.usp .wrap{grid-template-columns:1fr}.usp-i{padding:14px 0;border-top:1px solid rgba(169,182,200,.25)}.usp-i:first-child{border-top:none}.ct h3{font-size:27px}.pp{font-size:18px}}
+
+/* ══ СБОРКА: шапка и футер как в форме/general, карточки как в test-general ══ */
+body{background:#FAF7F2;display:flex;flex-direction:column;align-items:center}
+body > *{width:100%;max-width:1100px}
+.wrap{max-width:none;padding:0 32px}
+.sec{padding:30px 0 44px}
+.sec.white{padding:40px 0 48px}
+/* шапка */
+.hero{background:linear-gradient(180deg,rgba(10,20,40,.55) 0,rgba(10,20,40,0) 170px),url('hero-bg.jpg') center/cover no-repeat;min-height:400px}
+.hero-in{padding:28px 32px 40px}
+.brand{display:flex;align-items:center;gap:16px}
+.hero-logo{width:130px;height:130px;margin:-14px 0;object-fit:contain;filter:brightness(0) invert(1);flex-shrink:0}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;line-height:1.1;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.brand-sub{font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#fff;margin-top:6px;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.badge-h{margin-top:34px}
+.hero h1{font-size:46px;max-width:760px}
+.hero p{max-width:620px}
+.hero p{display:inline-block;background:rgba(10,20,40,.62);border-left:3px solid #A9B6C8;padding:12px 18px;border-radius:0 4px 4px 0;max-width:640px;backdrop-filter:blur(2px);text-shadow:none}
+/* полоса преимуществ — как в general */
+.usp-strip{background:#fff;border-bottom:1px solid #EDE7DC;display:flex;align-items:flex-start;padding:22px 32px;overflow-x:auto}
+.usp-item{flex:1;min-width:110px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px;gap:9px}
+.usp-icon{width:38px;height:38px;flex-shrink:0}
+.usp-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1C2B4B;line-height:1.45;max-width:150px}
+/* заголовок раздела — как в general */
+.sec-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;text-transform:uppercase;color:#1C2B4B;line-height:1.1}
+.section-subtitle{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#A9B6C8;text-transform:uppercase;margin-top:2px}
+.btn-price{display:inline-flex;align-items:center;gap:10px;background:#1C2B4B;border:1.5px solid #A9B6C8;border-radius:999px;padding:12px 22px 12px 18px;text-decoration:none;flex-shrink:0}
+.btn-price-icon{width:17px;height:17px;flex-shrink:0}
+.btn-price-divider{width:1px;height:18px;background:rgba(169,182,200,.5);flex-shrink:0}
+.btn-price-text{font-size:12px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:#fff}
+.btn-price-arrow{width:15px;height:15px;flex-shrink:0;transition:transform .15s ease}
+.btn-price:hover .btn-price-arrow{transform:translateX(3px)}
+.grid{gap:20px}
+.ct h3{font-size:26px}
+/* CTA и футер — как в general, шрифты по шкале */
+.cta-section{background:linear-gradient(rgba(10,20,40,.62),rgba(10,20,40,.62)),url('cta-bg.jpg') center/cover no-repeat;padding:36px 32px;display:flex;align-items:center;gap:32px}
+.cta-left{flex:1;min-width:0}
+.cta-headline{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;text-transform:uppercase;line-height:1.1;margin-bottom:12px}
+.cta-sub{font-size:15px;color:rgba(255,255,255,.88);line-height:1.6}
+.cta-link-box{display:inline-flex;align-items:center;gap:8px;background:#A9B6C8;padding:10px 18px;margin-top:16px;text-decoration:none}
+.cta-link-text{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#1C2B4B}
+.cta-hint{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.7);margin-top:7px}
+.cta-right{display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0}
+.cta-scan-text{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#fff;text-align:center;line-height:1.4}
+.qr-box{width:104px;height:104px;background:#fff;padding:6px;flex-shrink:0}
+.qr-box img{width:100%;height:100%}
+.footer{background:#1C2B4B;padding:28px 32px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start}
+.footer-col-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#A9B6C8;margin-bottom:14px;line-height:1.5}
+.f-contact{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px}
+.f-icon{flex-shrink:0;margin-top:2px}
+.f-icon svg{width:18px;height:18px;stroke:#A9B6C8;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.f-name{font-size:15px;color:#fff;font-weight:600}
+.f-phone{font-size:15px;color:rgba(255,255,255,.88)}
+.f-label{font-size:11px;color:rgba(255,255,255,.6);margin-bottom:2px}
+.f-val{font-size:14px;color:#fff}
+.ig-footer{display:inline-flex;align-items:center;gap:7px;border:1px solid #A9B6C8;padding:8px 12px;background:transparent;text-decoration:none;margin-top:6px}
+.ig-footer svg{width:15px;height:15px}
+.ig-footer-text{font-size:11px;font-weight:700;color:#A9B6C8;text-transform:uppercase;letter-spacing:.5px}
+.footer-right-text{font-size:13px;color:rgba(255,255,255,.88);line-height:1.6}
+.footer-email-accent{color:#A9B6C8;font-size:14px;margin-top:6px}
+@media(max-width:1000px){.wrap{padding:0 24px}.usp-strip{padding:18px 20px}.footer{grid-template-columns:1fr 1fr}.footer>div:last-child{grid-column:1/-1}.cta-section{flex-direction:column;align-items:flex-start;padding:28px 24px}.cta-right{flex-direction:row;gap:16px}}
+@media(max-width:640px){
+ .wrap{padding:0 16px}.hero-in{padding:20px 16px 28px}.hero{min-height:0}
+ .hero-logo{width:84px;height:84px;margin:-8px 0}.brand-name{font-size:22px;letter-spacing:1.4px}.brand-sub{font-size:10px;letter-spacing:2px}
+ .badge-h{margin-top:24px}.hero h1{font-size:30px}
+ .usp-strip{padding:16px 8px;flex-wrap:wrap;overflow:visible;row-gap:16px}.usp-item{flex:0 0 33.33%;min-width:0;padding:0 6px}.usp-label{font-size:10px}.hero{background:linear-gradient(rgba(10,20,40,.35),rgba(10,20,40,.35)),url('hero-bg.jpg') 25% center/cover no-repeat}
+ .section-title{font-size:26px}.section-subtitle{font-size:20px}
+ .footer{grid-template-columns:1fr;padding:22px 16px;gap:20px}.footer>div:last-child{grid-column:auto}
+ .cta-headline{font-size:28px}.cta-right{flex-direction:column;align-items:flex-start}
+}
+.ig{font-size:12px;margin-top:12px;text-decoration:none}
+.ig svg{width:15px;height:15px;margin-right:6px;stroke:#7B889C;fill:none;stroke-width:1.8}
+.ig-slot{visibility:hidden}
+.card .ig{display:flex;align-items:center;justify-content:center;border:1.5px solid #A9B6C8;border-radius:4px;background:#fff;padding:9px 10px;margin-top:10px;font-size:12px;font-weight:700;letter-spacing:.4px;color:#1C2B4B;text-decoration:none;transition:filter .15s}
+.card a.ig:hover{filter:brightness(.96);color:#1C2B4B}
+
+/* ── Акцент: серебро + стеклянные 3D-кнопки ── */
+.eyebrow,.section-subtitle{color:#5C6A82}
+.footer-col-title,.footer-email-accent,.ig-footer-text{color:#EAEFF6}
+.btn{position:relative;isolation:isolate;overflow:hidden;border-radius:14px;font-weight:800;letter-spacing:.4px;transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+.btn::before{content:"";position:absolute;left:6%;right:6%;top:2px;height:46%;border-radius:12px 12px 40% 40%/12px 12px 18px 18px;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.08));pointer-events:none;z-index:-1}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn:active{transform:translateY(1px)}
+.btn.pres,.card.secm .btn.pres{color:#fff;border:1px solid rgba(255,255,255,.35);background:linear-gradient(180deg,rgba(70,98,160,.92) 0%,rgba(28,43,75,.94) 55%,rgba(16,26,48,.96) 100%);text-shadow:0 1px 2px rgba(0,0,0,.45);box-shadow:0 10px 20px rgba(28,43,75,.40),0 2px 5px rgba(28,43,75,.30),inset 0 1px 0 rgba(255,255,255,.55),inset 0 -4px 8px rgba(0,0,0,.35)}
+.btn.line,.apollon .btn.line,.tarsis .btn.line,.belle .btn.line,.pom .btn.line,.central .btn.line{color:#14233f;border:1px solid rgba(255,255,255,.7);background:linear-gradient(180deg,rgba(238,243,250,.98) 0%,rgba(169,182,200,.98) 60%,rgba(123,136,156,.98) 100%);text-shadow:0 1px 0 rgba(255,255,255,.5);box-shadow:0 10px 20px rgba(123,136,156,.45),0 2px 5px rgba(123,136,156,.35),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -4px 8px rgba(123,136,156,.35)}
+
+/* ── Стекло: остальные кнопки ── */
+.gloss{position:relative;isolation:isolate;overflow:hidden}
+.btn-price,.hb,.cb1,.cb2,.card .ig,.ig-footer{position:relative;isolation:isolate;overflow:hidden;transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+.btn-price::before,.hb::before,.cb1::before,.cb2::before,.card .ig::before,.ig-footer::before{content:"";position:absolute;left:6%;right:6%;top:2px;height:46%;border-radius:12px 12px 40% 40%/12px 12px 18px 18px;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.06));pointer-events:none;z-index:-1}
+.btn-price:hover,.hb:hover,.cb1:hover,.cb2:hover,.card a.ig:hover,.ig-footer:hover{transform:translateY(-2px);filter:brightness(1.06)}
+/* Общий прайс: тёмное стекло, как «Презентация» */
+.btn-price{border-radius:999px;border:1px solid rgba(255,255,255,.35);background:linear-gradient(180deg,rgba(70,98,160,.92) 0%,rgba(28,43,75,.94) 55%,rgba(16,26,48,.96) 100%);box-shadow:0 10px 20px rgba(28,43,75,.40),0 2px 5px rgba(28,43,75,.30),inset 0 1px 0 rgba(255,255,255,.55),inset 0 -4px 8px rgba(0,0,0,.35)}
+.btn-price::before{border-radius:999px 999px 40% 40%/14px 14px 12px 12px}
+.btn-price-divider{background:rgba(255,255,255,.35)}
+/* Смотреть объекты: серебряное стекло, как «Прайс» */
+.hb,.cb1{border-radius:14px;border:1px solid rgba(255,255,255,.7);color:#14233f;font-weight:800;background:linear-gradient(180deg,rgba(238,243,250,.98) 0%,rgba(169,182,200,.98) 60%,rgba(123,136,156,.98) 100%);text-shadow:0 1px 0 rgba(255,255,255,.5);box-shadow:0 10px 20px rgba(123,136,156,.45),0 2px 5px rgba(123,136,156,.35),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -4px 8px rgba(123,136,156,.35)}
+/* Стать партнёром / Смотреть видео: матовое стекло поверх фото */
+.hb.ghost,.cb2{color:#fff;border:1px solid rgba(255,255,255,.55);background:linear-gradient(180deg,rgba(255,255,255,.30) 0%,rgba(255,255,255,.10) 100%);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-shadow:0 1px 3px rgba(0,0,0,.5);box-shadow:0 10px 22px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.7),inset 0 -3px 8px rgba(255,255,255,.12)}
+.cb2{border-radius:14px}
+/* Смотреть в Instagram: светлое стекло с серебряным ободком */
+.card .ig{border-radius:14px;border:1px solid rgba(169,182,200,.9);background:linear-gradient(180deg,#FFFFFF 0%,#EDF1F7 100%);color:#1C2B4B;font-weight:800;box-shadow:0 6px 14px rgba(123,136,156,.30),inset 0 1px 0 #fff,inset 0 -3px 6px rgba(123,136,156,.25)}
+.ig-footer{border-radius:14px;border:1px solid rgba(255,255,255,.45);background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 8px 18px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.55);padding:10px 14px}
+.ig-footer-text{color:#fff}
+
+
+/* ── Переключатель языков ── */
+.hero-in{position:relative}
+.lang-sw{position:absolute;top:24px;right:32px;z-index:5;display:flex;gap:2px;padding:4px;border-radius:14px;border:1px solid rgba(255,255,255,.5);background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.08));-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 6px 16px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.6);font-family:'Inter',sans-serif}
+.lang-sw a,.lang-sw b{font-size:12px;font-weight:800;letter-spacing:.5px;padding:6px 10px;border-radius:10px;color:#fff;text-decoration:none;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.lang-sw b{background:linear-gradient(180deg,#EEF3FA,#A9B6C8);color:#14233f;text-shadow:none;box-shadow:inset 0 1px 0 #fff}
+.lang-sw a:hover{background:rgba(255,255,255,.22)}
+@media(max-width:640px){.lang-sw{position:static;align-self:flex-end;width:max-content;margin:0 0 12px auto}.lang-sw a,.lang-sw b{padding:5px 8px;font-size:11px}}
+</style>
+<link rel="alternate" hreflang="ru" href="https://optimus-estate.github.io/general/"/><link rel="alternate" hreflang="bg" href="https://optimus-estate.github.io/general-bg/"/><link rel="alternate" hreflang="en" href="https://optimus-estate.github.io/general-en/"/><link rel="alternate" hreflang="pl" href="https://optimus-estate.github.io/general-pl/"/><link rel="alternate" hreflang="de" href="https://optimus-estate.github.io/general-de/"/>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-in"><nav class="lang-sw" aria-label="Language"><a href="https://optimus-estate.github.io/general/" hreflang="ru">RU</a><a href="https://optimus-estate.github.io/general-bg/" hreflang="bg">BG</a><a href="https://optimus-estate.github.io/general-en/" hreflang="en">EN</a><b>PL</b><a href="https://optimus-estate.github.io/general-de/" hreflang="de">DE</a></nav>
+    <div class="brand"><img src="logo.png" alt="OPTIMUS ESTATE" class="hero-logo"/><div><div class="brand-name">Optimus Estate</div><div class="brand-sub">Firma inwestycyjna</div></div></div>
+    <div><span class="badge-h">Tylko dla partnerów</span></div>
+    <h1>Ekskluzywne nieruchomości na wybrzeżu Bułgarii</h1>
+    <p>Nasze obiekty nie są publikowane na otwartych portalach (alo.bg i in.) — to prawo pozostaje po Waszej stronie. <b>Klient zostaje przypisany do Was podczas pierwszego oglądania.</b></p>
+    <div class="hero-btns">
+      <a href="#objects" class="hb">Zobacz obiekty</a>
+      <a href="https://optimus-estate.github.io/presentation-forma.ru/" target="_blank" class="hb ghost">Zostań partnerem</a>
+    </div>
+  </div>
+</section>
+
+<div class="usp-strip"><div class="usp-item"><svg class="usp-icon" viewBox="0 0 32 32" fill="none" stroke="#1C2B4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="4"/><circle cx="22" cy="10" r="4"/><path d="M4 26c0-4 3.6-7 8-7h8c4.4 0 8 3 8 7"/></svg><span class="usp-label">Pracujemy wyłącznie przez partnerów</span></div><div class="usp-item"><svg class="usp-icon" viewBox="0 0 32 32" fill="none" stroke="#1C2B4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M16 10v2m0 8v2M13 13.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5c0 2.5-3 3-3 5m0 1h.01"/></svg><span class="usp-label">Bezpośrednie ceny od dewelopera</span></div><div class="usp-item"><svg class="usp-icon" viewBox="0 0 32 32" fill="none" stroke="#1C2B4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="18" rx="2"/><path d="M21 5v4M11 5v4M5 15h22"/><path d="M11 20h4m-4 4h2"/></svg><span class="usp-label">Obiekty z gotowymi dokumentami i pełną obsługą transakcji</span></div><div class="usp-item"><svg class="usp-icon" viewBox="0 0 32 32" fill="none" stroke="#1C2B4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 5l2.8 7.8H27l-6.5 4.8 2.5 7.7L16 21l-7 4.3 2.5-7.7L5 12.8h8.2z"/></svg><span class="usp-label">Sprzedaż na wyłączność</span></div><div class="usp-item"><svg class="usp-icon" viewBox="0 0 32 32" fill="none" stroke="#1C2B4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 27V13l10-8 10 8v14"/><path d="M12 27v-7h8v7"/><path d="M6 27h20"/></svg><span class="usp-label">Własne projekty inwestycyjne</span></div></div>
+
+<section class="sec" id="objects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="section-title">Ekskluzywne projekty</div><div class="section-subtitle">W najlepszych lokalizacjach wybrzeża</div></div>
+      <a href="https://airtable.com/app4flQF8p47DvF7v/shr9xS2MU8pricfTu" target="_blank" class="btn-price">
+        <svg class="btn-price-icon" viewBox="0 0 24 24" fill="none" stroke="#A9B6C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+        <span class="btn-price-divider"></span><span class="btn-price-text">Pełny cennik (RU)</span>
+        <svg class="btn-price-arrow" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="grid">
+
+    <article class="card apollon">
+      <div class="ph"><img src="apollon.jpg" alt="Apollon" loading="lazy"/></div>
+      <div class="cb">
+        <div class="ct"><div><h3>Apollon</h3><div class="loc"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rawda, Nesebyr</div></div><span class="badge top">Prowizja dodatkowo</span></div>
+        <ul><li>Kompleks rodzinny nad morzem, spokojna okolica</li><li>Duży sezonowy popyt na wynajem</li><li>Studia oraz mieszkania 1, 2 i 3-pokojowe</li></ul>
+        <div class="offer"><div class="lbl">Możecie zaproponować klientowi</div><div class="tags"><span class="tag">Zarządzanie nieruchomością</span><span class="tag">Remont i meblowanie</span></div></div>
+        <div class="fee"><span>Opłata eksploatacyjna</span><b>11 - 14 €/m²</b></div>
+        <div class="btns one"><a href="https://airtable.com/app4flQF8p47DvF7v/shrOfWUrVA1HO54K1/tbl56x9OZb7wZEV4W" target="_blank" class="btn line">Cennik (RU)</a></div><div class="ig ig-slot">&nbsp;</div>
+      </div>
+    </article>
+    <article class="card tarsis">
+      <div class="ph"><img src="tarsis-hero2.png" alt="Tarsis" loading="lazy"/></div>
+      <div class="cb">
+        <div class="ct"><div><h3>Tarsis</h3><div class="loc"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Słoneczny Brzeg</div></div><span class="badge top">Prowizja dodatkowo</span></div>
+        <ul><li>Kompleks wypoczynkowy o wysokiej rentowności</li><li>Baseny, restauracje, SPA, fitness</li><li>Studia oraz mieszkania 1 i 2-pokojowe</li></ul>
+        <div class="offer"><div class="lbl">Możecie zaproponować klientowi</div><div class="tags"><span class="tag fill">Gwarantowany najem</span><span class="tag">Zarządzanie nieruchomością</span><span class="tag">Remont i meblowanie</span></div></div>
+        <div class="fee"><span>Opłata eksploatacyjna</span><b>16,80 €/m²</b></div>
+        <div class="btns one"><a href="https://airtable.com/app4flQF8p47DvF7v/shrA938t57aTDfK68/tbl56x9OZb7wZEV4W" target="_blank" class="btn line">Cennik (RU)</a></div><div class="ig ig-slot">&nbsp;</div>
+      </div>
+    </article>
+    <article class="card belle">
+      <div class="ph"><img src="belleair.jpg" alt="Belle Air" loading="lazy"/></div>
+      <div class="cb">
+        <div class="ct"><div><h3>Belle Air</h3><div class="loc"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Święty Włas</div></div><span class="badge in">10% w cenie</span></div>
+        <ul><li>Prestiżowy styl życia</li><li>Wysoka jakość wykonania</li><li>Spokojna i prestiżowa okolica</li></ul>
+        <div class="offer"><div class="lbl">Możecie zaproponować klientowi</div><div class="tags"><span class="tag fill">Gwarantowany najem</span><span class="tag">Zarządzanie nieruchomością</span><span class="tag">Remont i meblowanie</span></div></div>
+        <div class="fee"><span>Opłata eksploatacyjna</span><b>9 €/m²</b></div>
+        <div class="btns one"><a href="https://airtable.com/app4flQF8p47DvF7v/shrVvkghdvcsk604b/tbl56x9OZb7wZEV4W" target="_blank" class="btn line">Cennik (RU)</a></div><a class="ig" href="https://www.instagram.com/belleair_svetivlas?utm_source=qr" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="#7B889C" stroke="none"/></svg>Zobacz na Instagramie</a>
+      </div>
+    </article>
+    <article class="card pom">
+      <div class="ph"><img src="pomorie.png" alt="Pomorie Luxury Village" loading="lazy"/></div>
+      <div class="cb">
+        <div class="ct"><div><h3>Pomorie Luxury Village</h3><div class="loc"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Pomorie</div></div><span class="badge in">3% w cenie + dodatkowo</span></div>
+        <ul><li>Ekskluzywne domy z własnymi działkami</li><li>Spokojna i prestiżowa okolica</li><li>Do mieszkania przez cały rok</li></ul>
+        <div class="offer"><div class="lbl">Możecie zaproponować klientowi</div><div class="tags"><span class="tag">Zarządzanie nieruchomością</span><span class="tag">Remont i meblowanie</span></div></div>
+        <div class="fee"><span>Format</span><b>Bez opłaty eksploatacyjnej</b></div>
+        <div class="btns one"><a href="https://airtable.com/app4flQF8p47DvF7v/shrnfLx6VbdRji0tP" target="_blank" class="btn line">Cennik (RU)</a></div><a class="ig" href="https://www.instagram.com/pomorieluxuryvillage/" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="#7B889C" stroke="none"/></svg>Zobacz na Instagramie</a>
+      </div>
+    </article>
+    <article class="card central">
+      <div class="ph"><img src="centralpark.jpg" alt="Central Park" loading="lazy"/></div>
+      <div class="cb">
+        <div class="ct"><div><h3>Central Park</h3><div class="loc"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Burgas</div></div><span class="badge top">Prowizja dodatkowo</span></div>
+        <ul><li>Nowoczesny kompleks w rozwijającej się dzielnicy</li><li>Komfort życia przez cały rok</li><li>Rozwinięta infrastruktura w pobliżu</li></ul>
+        <div class="offer"><div class="lbl">Możecie zaproponować klientowi</div><div class="tags"><span class="tag">Zarządzanie nieruchomością</span><span class="tag">Remont i meblowanie</span></div></div>
+        <div class="fee"><span>Opłata eksploatacyjna</span><b>4,2 €/m²</b></div>
+        <div class="btns one"><a href="https://airtable.com/app4flQF8p47DvF7v/shrvIqf8UItHoXTLd/tbl56x9OZb7wZEV4W" target="_blank" class="btn line">Cennik (RU)</a></div><div class="ig ig-slot">&nbsp;</div>
+      </div>
+    </article>
+    <article class="card secm">
+      <div class="ph"><img src="secondary.jpg" alt="Rynek wtórny" loading="lazy"/></div>
+      <div class="cb">
+        <div class="ct"><div><h3>Rynek wtórny</h3><div class="loc"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Różne lokalizacje na wybrzeżu</div></div><span class="badge top">Prowizja dodatkowo</span></div>
+        <ul><li>Gotowe apartamenty w kurortach</li><li>Na wypoczynek i wynajem</li><li>Studia i apartamenty o różnych układach</li></ul>
+        <div class="offer"><div class="lbl">Możecie zaproponować klientowi</div><div class="tags"><span class="tag">Zarządzanie nieruchomością</span><span class="tag">Remont i meblowanie</span></div></div>
+        <div class="fee"><span>Gotowość</span><b>Obiekty gotowe</b></div>
+        <div class="btns one"><a href="https://airtable.com/app4flQF8p47DvF7v/shrN6cqfIJZFu7txU/tbl56x9OZb7wZEV4W" target="_blank" class="btn pres">Cennik (RU)</a></div><div class="ig ig-slot">&nbsp;</div>
+      </div>
+    </article>
+    </div>
+
+    <div class="head" style="margin-top:72px">
+      <div><div class="eyebrow">Dodatkowe możliwości</div><h2 class="h2">Narzędzia dla Waszej sprzedaży</h2><p style="font-size:11px;color:#7c8190;margin-top:8px">Dla klienta — gotowy dochód i rozwiązanie pod klucz, dla Was — szybciej zamknięta transakcja.</p></div>
+    </div>
+    <div class="tools">
+      <div class="tool"><div class="tool-ic"><svg class="ico" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></div><div class="q">«Czy to się opłaci?»</div><div class="tool-t">— Gwarantowany najem</div><div class="tool-s">Stały dochód wg umowy — niezależnie od sezonu.</div><span class="chip">Tarsis · Belle Air</span></div>
+      <div class="tool"><div class="tool-ic"><svg class="ico" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3"/></svg></div><div class="q">«Nie będę mógł przyjeżdżać»</div><div class="tool-t">— Zarządzanie nieruchomością</div><div class="tool-s">Pełny serwis i raporty — klient nie musi być na miejscu.</div><span class="chip">Wszystkie obiekty</span></div>
+      <div class="tool"><div class="tool-ic"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="6" rx="1"/><path d="M17 6h3v5h-8v3"/><rect x="10" y="14" width="4" height="7" rx="1"/></svg></div><div class="q">«Mieszkanie nie jest gotowe do życia»</div><div class="tool-t">— Remont i meblowanie</div><div class="tool-s">Rozwiązania pod klucz — mieszkanie gotowe do zamieszkania lub wynajmu.</div><span class="chip">Na zapytanie</span></div>
+      <div class="tool"><div class="tool-ic"><svg class="ico" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6"/></svg></div><div class="q">«Obawiam się formalności»</div><div class="tool-t sm">— Wsparcie prawne</div><div class="tool-s">Weryfikacja, przygotowanie dokumentów i obsługa transakcji.</div><span class="chip">Wszystkie obiekty</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec white" id="how">
+  <div class="wrap">
+    <div class="eyebrow">Prosty i przejrzysty proces</div>
+    <h2 class="h2">Jak współpracujemy z partnerami</h2>
+    <div class="steps">
+      <div class="step"><div class="sn">01</div><div class="st">Kontaktujecie się z nami</div><div class="ss">Zostawiacie zapytanie o współpracę</div></div>
+      <div class="step"><div class="sn">02</div><div class="st">Otrzymujecie dostępność</div><div class="ss">Aktualne ceny, cenniki i prezentacje</div></div>
+      <div class="step"><div class="sn">03</div><div class="st">Wybieracie obiekt</div><div class="ss">Zgodnie z potrzebami klienta</div></div>
+      <div class="step"><div class="sn">04</div><div class="st">Rezerwacja i prawnik</div><div class="ss">Rezerwacja i obsługa prawna</div></div>
+      <div class="step"><div class="sn">05</div><div class="st">Transakcja</div><div class="ss">Z gwarantowaną ochroną Waszej prowizji</div></div>
+      <div class="step dark"><div class="sn">06</div><div class="st">Remont i najem <span class="new">NOWOŚĆ</span></div><div class="ss">Wspieramy klienta po transakcji</div></div>
+      <div class="step"><div class="sn">07</div><div class="st">Bonusy</div><div class="ss">Program bonusowy dla partnerów</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+  <div class="cta-left">
+    <h2 class="cta-headline">Współpracujmy!</h2>
+    <p class="cta-sub">Zostańcie naszym partnerem i oferujcie<br>klientom to, co najlepsze na wybrzeżu Bułgarii.</p>
+    <a href="https://youtu.be/vjC142aE-5o" target="_blank" class="cta-link-box">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C2B4B" stroke-width="2.2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      <span class="cta-link-text">HTTPS://YOUTU.BE/VJC142AE-5O</span>
+    </a>
+    <div class="cta-hint">Kliknij link, aby obejrzeć film</div>
+  </div>
+  <div class="cta-right">
+    <div class="cta-scan-text">Zeskanuj kod QR,<br>aby obejrzeć</div>
+    <div class="qr-box">
+  <img src="qr.png" width="78" height="78" alt="Kod QR"/>
+</div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div>
+    <div class="footer-col-title">W sprawie oglądania i dodatkowych informacji skontaktuj się z nami</div>
+    <div class="f-contact">
+      <div class="f-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <div>
+        <div class="f-name">Aleksander</div>
+        <div class="f-phone">+359 87 769 25 46</div>
+      </div>
+    </div>
+    <div class="f-contact">
+      <div class="f-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <div>
+        <div class="f-name">Wasilij</div>
+        <div class="f-phone">+359 89 517 66 85</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="f-contact">
+      <div class="f-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div>
+        <div class="f-label">Nasz e-mail:</div>
+        <div class="f-val">optimusbg@mail.ru</div>
+      </div>
+    </div>
+    <div class="f-contact" style="margin-top:4px">
+      <div class="f-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <div>
+        <div class="f-label">Nasza strona:</div>
+        <div class="f-val">https://bolgarskidom.com</div>
+      </div>
+    </div>
+          <a href="https://www.instagram.com/optimus.estate?igsh=MTEydXZhZnJlNzRzZg==" target="_blank" class="ig-footer">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A9B6C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="#A9B6C8" stroke="none"/></svg>
+  <span class="ig-footer-text">Zobacz Optimus Estate na Instagramie</span>
+</a>
+    </div>
+
+  <div>
+    <p class="footer-right-text">Jeśli chcesz otrzymywać informacje o naszych ofertach, skontaktuj się z nami telefonicznie lub wyślij zapytanie e-mailem —</p>
+    <div class="footer-email-accent">optimusbg@mail.ru</div>
+  </div>
+</footer>
+
+</body>
+</html>
