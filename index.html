@@ -343,6 +343,14 @@ body > *{width:100%;max-width:1100px}
 .lang-sw b{background:linear-gradient(180deg,#EEF3FA,#A9B6C8);color:#14233f;text-shadow:none;box-shadow:inset 0 1px 0 #fff}
 .lang-sw a:hover{background:rgba(255,255,255,.22)}
 @media(max-width:640px){.lang-sw{position:static;align-self:flex-end;width:max-content;margin:0 0 12px auto}.lang-sw a,.lang-sw b{padding:5px 8px;font-size:11px}}
+
+/* Ссылка на видео: стеклянная кнопка */
+.cta-link-box{position:relative;isolation:isolate;overflow:hidden;border-radius:14px;border:1px solid rgba(255,255,255,.7);background:linear-gradient(180deg,rgba(238,243,250,.98) 0%,rgba(169,182,200,.98) 60%,rgba(123,136,156,.98) 100%);box-shadow:0 10px 20px rgba(0,0,0,.35),0 2px 5px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -4px 8px rgba(123,136,156,.35);transition:transform .15s ease,filter .15s ease}
+.cta-link-box::before{content:"";position:absolute;left:6%;right:6%;top:2px;height:46%;border-radius:12px 12px 40% 40%/12px 12px 18px 18px;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.06));pointer-events:none;z-index:-1}
+.cta-link-box:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.cta-link-text{color:#14233f;font-weight:800;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.cta-link-box svg{stroke:#14233f}
+@media(max-width:640px){.cta-link-text{font-size:12px;letter-spacing:.3px}}
 </style>
 <link rel="alternate" hreflang="ru" href="https://optimus-estate.github.io/general/"/><link rel="alternate" hreflang="bg" href="https://optimus-estate.github.io/general-bg/"/><link rel="alternate" hreflang="en" href="https://optimus-estate.github.io/general-en/"/><link rel="alternate" hreflang="pl" href="https://optimus-estate.github.io/general-pl/"/><link rel="alternate" hreflang="de" href="https://optimus-estate.github.io/general-de/"/>
 </head>
